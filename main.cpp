@@ -1,4 +1,5 @@
 #include <iostream>
+#include <stdio.h>
 #include <vector>
 
 #include "./Modbus/Modbus.hpp"
@@ -9,7 +10,7 @@ using namespace std;
 int main(){
     vector<Modbus*> modbuss(1);
     cout << "Modbuss create success\n";
-    modbuss[0] = new Modbus("0.0.0.0", 5000);
+    Modbus* modbus = new Modbus("0.0.0.0", 5000);
     int transaction = 0;
     int isContinue = 1;
     
